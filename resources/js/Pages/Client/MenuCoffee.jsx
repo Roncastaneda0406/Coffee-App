@@ -6,55 +6,64 @@ const coffees = [
   {
     id: 1,
     name: 'Cappuccino',
-    image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=512&h=512&fit=crop'
+    description: 'Rich espresso with steamed milk foam.',
+    image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop'
   },
   {
     id: 2,
     name: 'Iced Latte',
-    image: 'https://images.pexels.com/photos/302904/pexels-photo-302904.jpeg?auto=compress&cs=tinysrgb&w=512&h=512&fit=crop'
+    description: 'Smooth espresso over ice with cold milk.',
+    image: 'https://images.pexels.com/photos/302904/pexels-photo-302904.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop'
   },
   {
     id: 3,
     name: 'Mocha',
-    image: 'https://images.pexels.com/photos/302897/pexels-photo-302897.jpeg?auto=compress&cs=tinysrgb&w=512&h=512&fit=crop'
+    description: 'Espresso with chocolate and steamed milk.',
+    image: 'https://images.pexels.com/photos/302897/pexels-photo-302897.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop'
   },
   {
     id: 4,
     name: 'Espresso',
-    image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=512&h=512&fit=crop'
+    description: 'Pure and bold coffee shot.',
+    image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop'
   },
   {
     id: 5,
     name: 'Americano',
-    image: 'https://images.pexels.com/photos/302904/pexels-photo-302904.jpeg?auto=compress&cs=tinysrgb&w=512&h=512&fit=crop'
+    description: 'Espresso with hot water for smoothness.',
+    image: 'https://images.pexels.com/photos/302904/pexels-photo-302904.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop'
   },
   {
     id: 6,
     name: 'Latte',
-    image: 'https://images.pexels.com/photos/302897/pexels-photo-302897.jpeg?auto=compress&cs=tinysrgb&w=512&h=512&fit=crop'
+    description: 'Espresso with steamed milk and foam.',
+    image: 'https://images.pexels.com/photos/302897/pexels-photo-302897.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop'
   },
   {
     id: 7,
     name: 'Macchiato',
-    image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=512&h=512&fit=crop'
+    description: 'Espresso marked with milk foam.',
+    image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop'
   },
   {
     id: 8,
     name: 'Flat White',
-    image: 'https://images.pexels.com/photos/302904/pexels-photo-302904.jpeg?auto=compress&cs=tinysrgb&w=512&h=512&fit=crop'
+    description: 'Smooth microfoam over espresso.',
+    image: 'https://images.pexels.com/photos/302904/pexels-photo-302904.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop'
   }
 ]
 
 function MenuCoffee() {
   return (
-    <div>
+    <div className="min-h-screen bg-gray-50">
       <HeaderMain />
-      <main className="max-w-6xl mx-auto px-6 py-8">
-        <div className="grid grid-cols-4 gap-x-12 gap-y-8">
+      <main className="max-w-7xl mx-auto px-6 py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {coffees.map((coffee) => (
             <Card
               key={coffee.id}
-              name={coffee.name}
+              title={coffee.name}
+              description={coffee.description}
               image={coffee.image}
             />
           ))}
