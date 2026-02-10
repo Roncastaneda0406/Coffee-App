@@ -5,7 +5,7 @@ import forms from '@tailwindcss/forms';
 export default {
     content: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
-        './storage/framework/views/*.php',
+        './storage/framework/views/*.blade.php',
         './resources/views/**/*.blade.php',
         './resources/js/**/*.jsx',
     ],
@@ -14,6 +14,16 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+            },
+            animation: {
+                scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+            },
+            keyframes: {
+                scroll: {
+                    to: {
+                        transform: "translate(calc(-50% - 0.5rem))",
+                    },
+                },
             },
         },
     },
